@@ -1,0 +1,30 @@
+.carrousel {
+    width: 600px; 
+    overflow: hidden;
+    margin: auto;
+}
+
+.img {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.img img {
+    width: 600px; /* même taille que le conteneur */
+    flex-shrink: 0;
+}
+
+.btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 10%;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
