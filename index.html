@@ -6,21 +6,29 @@
     <link rel="stylesheet" href="style.css">
     <title>Scroller</title>
 </head>
-<body>
+    <body>
     
     <div class="carrousel">
-        <div class="img">
+        <div class="img" id="img">
             <img src="img/69197631_ph1.jpg" alt="">
             <img src="img/la-tour-montparnasse-infernale.jpg" alt="">
-            <img src="img/69197631_ph1.jpg" alt="">
+            <img src="img/abMmWUR6ARamzyXq7b5s1S0N1SP.webp" alt="">
         </div>
     </div>
-
-    <div>
-        <button class="btn" id="btn-prev"><</button>
-        <button class="btn" id="btn-suiv">></button>
+    <div class="controls">
+        <button onclick="prevSlide()">Prev</button>
+        <button onclick="nextSlide()">Next</button>
     </div>
+    
+    <script>
+        const track = document.getElementById("img");
+        function nextSlide() {
+            track.appendChild(track.firstElementChild);
+        }
+        function prevSlide() {
+            track.insertBefore(track.lastElementChild,track.firstChild);
+        }
+    </script>
 
-    <script src="script.js"></script>
-</body>
+    </body>
 </html>
